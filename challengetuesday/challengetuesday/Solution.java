@@ -11,8 +11,7 @@ public class Solution {
       
     }
     private static void flip(int[] A, int index) {
-        int[] arr = Arrays.copyOf(A, index + 1);
-        Arrays.sort(arr);
+        
     }
 
     public static void main(String[] args){
