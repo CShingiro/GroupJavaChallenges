@@ -5,13 +5,12 @@ import java.util.Arrays;
 public class Solution {
     public static void pancakeSort(int[] inputArray) {
         for(int i = inputArray.length;i > 1;--i) {
-            int index = find(inputArray, inputArray.length);
-            if(index != inputArray.length - 1) {
+            int index = find(inputArray, i);
+            if(index != i - 1) {
+                flip(inputArray, index);
                 flip(inputArray, i - 1);
-                //flip(inputArray, inputArray.length - 1);
             }
-            System.out.println(Arrays.toString(inputArray));
-        }       
+        }   
     }
     
     private static int find(int[] A, int target) {
