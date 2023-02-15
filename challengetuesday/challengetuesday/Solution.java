@@ -27,10 +27,7 @@ public class Solution {
         int temp = 0;
         int start = 0;
         int j = index;
-<<<<<<< HEAD
             
-=======
->>>>>>> a582f2a34d0c85d59ceedc5918c0477934b53c7e
         while(start < j) {
             temp = A[start];
             A[start] = A[j];
