@@ -7,19 +7,28 @@ public class Solution {
         for(int i = inputArray.length;i > 1;--i) {
             int index = find(inputArray, inputArray.length);
             if(index != inputArray.length - 1) {
-                flip(inputArray, index);
-                flip(inputArray, inputArray.length - 1);
+                flip(inputArray, i - 1);
+                //flip(inputArray, inputArray.length - 1);
             }
-        }
+            System.out.println(Arrays.toString(inputArray));
+        }       
     }
     
     private static int find(int[] A, int target) {
-      
+        int i,j;
+        for(i = 0,j = 0;j < target;j++) {
+            if (A[j] > A[i]) {
+                i = j;
+            }
+        }
+      return i;
+
     }
     private static void flip(int[] A, int index) {
         int temp = 0;
         int start = 0;
-        int j = index + 1;
+        int j = index;
+            
         while(start < j) {
             temp = A[start];
             A[start] = A[j];
