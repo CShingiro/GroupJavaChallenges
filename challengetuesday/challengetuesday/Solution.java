@@ -20,6 +20,7 @@ public class Solution {
             A[j] = temp;
             start++;
             j--;
+            System.out.println(A);
         }
     }
 
