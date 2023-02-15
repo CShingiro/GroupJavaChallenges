@@ -11,7 +11,16 @@ public class Solution {
       
     }
     private static void flip(int[] A, int index) {
-        
+        int temp = 0;
+        int start = 0;
+        int j = A.length;
+        while(start < j) {
+            temp = A[start];
+            A[start] = A[j];
+            A[j] = temp;
+            start++;
+            j--;
+        }
     }
 
     public static void main(String[] args){
