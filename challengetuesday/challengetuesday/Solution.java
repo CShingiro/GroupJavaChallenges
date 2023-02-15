@@ -4,7 +4,13 @@ import java.util.Arrays;
 
 public class Solution {
     public static void pancakeSort(int[] inputArray) {
-        
+        for(int i = inputArray.length;i > 1;--i) {
+            int index = find(inputArray, inputArray.length);
+            if(index != inputArray.length - 1) {
+                flip(inputArray, index);
+                flip(inputArray, inputArray.length - 1);
+            }
+        }
     }
     
     private static int find(int[] A, int target) {
